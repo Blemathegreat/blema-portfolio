@@ -1,0 +1,18 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+@layer base{
+ html{scroll-behavior:smooth;scroll-padding-top:88px}
+ body{@apply bg-paper text-ink-950 font-sans antialiased;font-size:1.0625rem;line-height:1.65}
+ h1,h2,h3{@apply font-display;letter-spacing:-.03em}
+ :focus-visible{outline:2px solid #8DA0FF;outline-offset:2px}
+ @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+}
+@layer components{
+ .wrap{@apply mx-auto w-full max-w-page px-5 sm:px-8 lg:px-12}
+ .sec{padding-block:clamp(72px,48px + 6vw,128px)}
+ .btn{@apply inline-flex h-[52px] items-center gap-2 rounded-md px-6 font-semibold transition duration-200 hover:-translate-y-px}
+ .btn-primary{@apply bg-cobalt text-white hover:bg-cobalt-deep}
+ .btn-ghost{@apply border-[1.5px] border-current}
+ .label{@apply font-mono text-xs font-medium uppercase tracking-[.08em]}
+ .dots{background-image:radial-gradient(rgba(246,243,236,.07) 1px,transparent 1px);background-size:24px 24px;mask-image:radial-gradient(ellipse at center,#000 40%,transparent 80%)}
+ .tag{@apply label rounded-sm border border-slate/30 px-2.5 py-1.5}
+}
